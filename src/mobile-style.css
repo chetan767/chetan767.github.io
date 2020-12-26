@@ -150,6 +150,9 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+        .edu-font {
+            font-size: 15px;
+        }
     }
     
     @media only screen and (min-width: 770px) and (max-width: 999px) {
