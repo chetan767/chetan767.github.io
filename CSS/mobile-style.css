@@ -46,19 +46,19 @@
             font-size: 0px;
         }
         .section-1 .screen:nth-child(1) {
-            background: url(../assets/first.jpg);
+            background: url(../images/first.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 350%;
         }
         .section-1 .screen:nth-child(2) {
-            background: url(../assets/second.jpg);
+            background: url(../images/second.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 350%;
         }
         .section-1 .screen:nth-child(3) {
-            background: url(../assets/third.jpg);
+            background: url(../images/third.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 350%;
