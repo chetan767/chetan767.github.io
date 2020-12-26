@@ -193,3 +193,15 @@ $(document).ready(function() {
 $('.navbar-nav>li>a').on('click', function() {
     $('.navbar-collapse').collapse('hide');
 });
+
+window.addEventListener('scroll', () => {
+    var elmnt = document.getElementsByTagName('html')[0];
+    var x = elmnt.scrollLeft;
+    var y = elmnt.scrollTop;
+
+    if (y == 0) {
+        document.getElementById("navbar").style.backgroundColor = "#0b2b50"
+        document.getElementById("navbar").style.top = "0"
+        console.log("kk")
+    }
+})
