@@ -194,14 +194,53 @@ $('.navbar-nav>li>a').on('click', function() {
     $('.navbar-collapse').collapse('hide');
 });
 
-window.addEventListener('scroll', () => {
-    var elmnt = document.getElementsByTagName('html')[0];
-    var x = elmnt.scrollLeft;
-    var y = elmnt.scrollTop;
+//for safari
 
-    if (y == 0) {
-        document.getElementById("navbar").style.backgroundColor = "#0b2b50"
-        document.getElementById("navbar").style.top = "0"
-        console.log("kk")
+function scroll() {
+    items.forEach((e) => {
+        e.onclick = () => {
+            console.log('click')
+            $("html, body").animate({ scrollTop: document.getElementById(e.name).offsetTop }, 600);
+
+
+        }
+
+
+    })
+}
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+if (isSafari) {
+    window.addEventListener('scroll', () => {
+        var elmnt = document.getElementsByTagName('html')[0];
+        var x = elmnt.scrollLeft;
+        var y = elmnt.scrollTop;
+
+        if (y == 0) {
+            document.getElementById("navbar").style.backgroundColor = "#0b2b50"
+            document.getElementById("navbar").style.top = "0"
+        }
+    })
+
+    let items = Array.from(document.getElementsByClassName('nav-link'))
+
+    window.addEventListener('resize', () => {
+
+        items.forEach((e) => {
+            e.onclick = () => {
+                console.log('click')
+                $("html, body").animate({ scrollTop: document.getElementById(e.name).offsetTop }, 600);
+
+
+            }
+
+
+        })
+    })
+    window.onload = () => {
+
+        scroll()
     }
-})
+
+}
+
+//end of for safari
