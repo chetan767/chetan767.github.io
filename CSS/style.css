@@ -296,8 +296,8 @@
             }
             /*--------------------------------------------------------------
 # Contact
+
 --------------------------------------------------------------*/
-            /*---------------------------------------------*/
             
             input {
                 outline: none;
@@ -312,38 +312,6 @@
             textarea:focus,
             input:focus {
                 border-color: transparent !important;
-            }
-            
-            input:focus::-webkit-input-placeholder {
-                color: transparent;
-            }
-            
-            input:focus:-moz-placeholder {
-                color: transparent;
-            }
-            
-            input:focus::-moz-placeholder {
-                color: transparent;
-            }
-            
-            input:focus:-ms-input-placeholder {
-                color: transparent;
-            }
-            
-            textarea:focus::-webkit-input-placeholder {
-                color: transparent;
-            }
-            
-            textarea:focus:-moz-placeholder {
-                color: transparent;
-            }
-            
-            textarea:focus::-moz-placeholder {
-                color: transparent;
-            }
-            
-            textarea:focus:-ms-input-placeholder {
-                color: transparent;
             }
             
             input::-webkit-input-placeholder {
@@ -392,17 +360,15 @@
             iframe {
                 border: none !important;
             }
-            /*//////////////////////////////////////////////////////////////////
-[ Contact 2 ]*/
+            /*---------------------------------------------*/
             
-            .bg-contact2 {
-                width: 100%;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
+            .container {
+                max-width: 1200px;
             }
+            /*//////////////////////////////////////////////////////////////////
+[ Contact ]*/
             
-            .container-contact2 {
+            .container-contact100 {
                 width: 100%;
                 min-height: 100vh;
                 display: -webkit-box;
@@ -414,138 +380,129 @@
                 justify-content: center;
                 align-items: center;
                 padding: 15px;
-                background: transparent;
+                position: relative;
+                z-index: 1;
             }
             
-            .wrap-contact2 {
-                width: 790px;
-                background-color: transparent;
+            .container-contact100::before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(93, 84, 240, 0.5);
+                background: -webkit-linear-gradient(left, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5));
+                background: -o-linear-gradient(left, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5));
+                background: -moz-linear-gradient(left, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5));
+                background: linear-gradient(left, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5));
+                pointer-events: none;
+            }
+            
+            .contact100-map {
+                position: absolute;
+                z-index: -2;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            
+            .wrap-contact100 {
+                width: 800px;
+                background: #fff;
                 border-radius: 10px;
                 overflow: hidden;
-                padding: 72px 55px 90px 55px;
+                padding: 72px 150px 25px 150px;
+                box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+                -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+                -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+                -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
             }
-            /*------------------------------------------------------------------
-[  ]*/
+            /*==================================================================
+[ Form ]*/
             
-            .contact2-form {
+            .contact100-form {
                 width: 100%;
             }
             
-            .contact2-form-title {
+            .contact100-form-title {
                 display: block;
-                font-family: Poppins-Bold;
-                font-size: 39px;
+                font-family: SourceSansPro-Bold;
+                font-size: 30px;
                 color: #333333;
                 line-height: 1.2;
-                text-align: center;
-                padding-bottom: 90px;
+                text-align: left;
+                padding-bottom: 34px;
             }
             /*------------------------------------------------------------------
-[  ]*/
+[ Input ]*/
             
-            .wrap-input2 {
+            .wrap-input100 {
                 width: 100%;
                 position: relative;
-                border-bottom: 2px solid #adadad;
-                margin-bottom: 37px;
+                background-color: #fff;
+                border-radius: 20px;
+                margin-bottom: 30px;
             }
             
-            .input2 {
+            .input100 {
                 display: block;
                 width: 100%;
-                font-family: Poppins-Regular;
-                font-size: 15px;
-                background-color: transparent;
-                color: #555555;
+                background: transparent;
+                font-family: SourceSansPro-Bold;
+                font-size: 16px;
+                color: #4b2354;
                 line-height: 1.2;
             }
+            /*---------------------------------------------*/
             
-            .focus-input2 {
-                position: absolute;
+            input.input100 {
+                height: 62px;
+                padding: 0 20px 0 23px;
+            }
+            
+            textarea.input100 {
+                min-height: 199px;
+                padding: 19px 20px 0 23px;
+            }
+            /*------------------------------------------------------------------
+[ Focus Input ]*/
+            
+            .focus-input100 {
                 display: block;
+                position: absolute;
                 width: 100%;
                 height: 100%;
                 top: 0;
                 left: 0;
                 pointer-events: none;
-            }
-            
-            .focus-input2::before {
-                content: "";
-                display: block;
-                position: absolute;
-                bottom: -2px;
-                left: 0;
-                width: 0;
-                height: 2px;
-                -webkit-transition: all 0.4s;
-                -o-transition: all 0.4s;
-                -moz-transition: all 0.4s;
-                transition: all 0.4s;
-                background: rgba(219, 21, 99, 1);
-                background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
-                background: -o-linear-gradient(45deg, #d5007d, #e53935);
-                background: -moz-linear-gradient(45deg, #d5007d, #e53935);
-                background: linear-gradient(45deg, #d5007d, #e53935);
-            }
-            
-            .focus-input2::after {
-                content: attr(data-placeholder);
-                display: block;
-                width: 100%;
-                position: absolute;
-                top: 0px;
-                left: 0;
-                font-family: Poppins-Regular;
-                font-size: 13px;
-                color: #999999;
-                line-height: 1.2;
+                border-radius: 20px;
+                box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.05);
+                -moz-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.05);
+                -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.05);
+                -o-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.05);
+                -ms-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.05);
                 -webkit-transition: all 0.4s;
                 -o-transition: all 0.4s;
                 -moz-transition: all 0.4s;
                 transition: all 0.4s;
             }
-            /*---------------------------------------------*/
             
-            input.input2 {
-                height: 45px;
-            }
-            
-            input.input2+.focus-input2::after {
-                top: 16px;
-                left: 0;
-            }
-            
-            textarea.input2 {
-                min-height: 115px;
-                padding-top: 13px;
-                padding-bottom: 13px;
-            }
-            
-            textarea.input2+.focus-input2::after {
-                top: 16px;
-                left: 0;
-            }
-            
-            .input2:focus+.focus-input2::after {
-                top: -13px;
-            }
-            
-            .input2:focus+.focus-input2::before {
-                width: 100%;
-            }
-            
-            .has-val.input2+.focus-input2::after {
-                top: -13px;
-            }
-            
-            .has-val.input2+.focus-input2::before {
-                width: 100%;
+            .input100:focus+.focus-input100 {
+                box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.15);
+                -moz-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.15);
+                -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.15);
+                -o-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.15);
+                -ms-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.15);
             }
             /*------------------------------------------------------------------
 [ Button ]*/
             
-            .container-contact2-form-btn {
+            .container-contact100-form-btn {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -moz-box;
@@ -553,38 +510,11 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                padding-top: 13px;
+                padding-top: 10px;
+                padding-bottom: 43px;
             }
             
-            .wrap-contact2-form-btn {
-                display: block;
-                position: relative;
-                z-index: 1;
-                border-radius: 2px;
-                width: auto;
-                overflow: hidden;
-                margin: 0 auto;
-            }
-            
-            .contact2-form-bgbtn {
-                position: absolute;
-                z-index: -1;
-                width: 300%;
-                height: 100%;
-                background: rgba(219, 21, 99, 1);
-                background: -webkit-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
-                background: -o-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
-                background: -moz-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
-                background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
-                top: 0;
-                left: -100%;
-                -webkit-transition: all 0.4s;
-                -o-transition: all 0.4s;
-                -moz-transition: all 0.4s;
-                transition: all 0.4s;
-            }
-            
-            .contact2-form-btn {
+            .contact100-form-btn {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -moz-box;
@@ -593,23 +523,47 @@
                 justify-content: center;
                 align-items: center;
                 padding: 0 20px;
-                min-width: 244px;
-                height: 50px;
-                font-family: Poppins-Medium;
-                font-size: 16px;
+                min-width: 160px;
+                height: 42px;
+                background-color: #bd59d4;
+                border-radius: 21px;
+                font-family: JosefinSans-Bold;
+                font-size: 14px;
                 color: #fff;
                 line-height: 1.2;
+                text-transform: uppercase;
+                padding-top: 5px;
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                transition: all 0.4s;
+                box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+                -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+                -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+                -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+                -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
             }
             
-            .wrap-contact2-form-btn:hover .contact2-form-bgbtn {
-                left: 0;
+            .contact100-form-btn:hover {
+                background-color: #4b2354;
+                box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+                -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+                -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+                -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+                -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
             }
             /*------------------------------------------------------------------
 [ Responsive ]*/
             
+            @media (max-width: 768px) {
+                .wrap-contact100 {
+                    padding: 72px 50px 25px 50px;
+                }
+            }
+            
             @media (max-width: 576px) {
-                .wrap-contact2 {
-                    padding: 72px 15px 90px 15px;
+                .wrap-contact100 {
+                    padding: 72px 15px 25px 15px;
                 }
             }
             /*------------------------------------------------------------------
@@ -619,63 +573,103 @@
                 position: relative;
             }
             
+            .alert-validate .focus-input100 {
+                box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
+                -moz-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
+                -webkit-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
+                -o-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
+                -ms-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
+            }
+            
             .alert-validate::before {
                 content: attr(data-validate);
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
                 position: absolute;
-                max-width: 70%;
-                background-color: white;
-                border: 1px solid #c80000;
-                border-radius: 2px;
-                padding: 4px 25px 4px 10px;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
-                transform: translateY(-50%);
-                right: 0px;
+                width: 100%;
+                min-height: 62px;
+                background-color: #fff;
+                border-radius: 20px;
+                top: 0px;
+                left: 0px;
+                padding: 0 45px 0 22px;
                 pointer-events: none;
-                font-family: Poppins-Regular;
-                color: #c80000;
-                font-size: 13px;
-                line-height: 1.4;
-                text-align: left;
-                visibility: hidden;
-                opacity: 0;
-                -webkit-transition: opacity 0.4s;
-                -o-transition: opacity 0.4s;
-                -moz-transition: opacity 0.4s;
-                transition: opacity 0.4s;
-            }
-            
-            .alert-validate::after {
-                content: "\f12a";
-                font-family: FontAwesome;
-                display: block;
-                position: absolute;
-                color: #c80000;
+                font-family: SourceSansPro-Bold;
                 font-size: 16px;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
-                transform: translateY(-50%);
-                right: 8px;
+                color: #fa4251;
+                line-height: 1.2;
             }
             
-            .alert-validate:hover:before {
-                visibility: visible;
-                opacity: 1;
+            .btn-hide-validate {
+                font-family: Material-Design-Iconic-Font;
+                font-size: 15px;
+                color: #fa4251;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                height: 62px;
+                top: 0px;
+                right: 28px;
             }
             
-            @media (max-width: 992px) {
-                .alert-validate::before {
-                    visibility: visible;
-                    opacity: 1;
-                }
+            .rs1-alert-validate.alert-validate::before {
+                background-color: #fff;
+            }
+            
+            .true-validate::after {
+                content: "\f269";
+                font-family: Material-Design-Iconic-Font;
+                font-size: 15px;
+                color: #57b846;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                height: 62px;
+                top: 0px;
+                right: 28px;
             }
             /*---------------------------------------------*/
+            
+            @media (max-width: 576px) {
+                .alert-validate::before {
+                    padding: 0 30px 0 10px;
+                }
+                .true-validate::after,
+                .btn-hide-validate {
+                    right: 10px;
+                }
+            }
+            /*==================================================================
+[ Contact more ]*/
+            
+            .contact100-more {
+                font-family: SourceSansPro-Regular;
+                font-size: 16px;
+                color: #999999;
+                line-height: 1.5;
+                text-align: center;
+            }
+            
+            .contact100-more-highlight {
+                color: #bd59d4;
+            }
+            /*---------------------------------------------*/
+            /*------------------------------------------*/
             
             button {
                 outline: none !important;
