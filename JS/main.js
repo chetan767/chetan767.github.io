@@ -1,3 +1,20 @@
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+let items = Array.from(document.getElementsByClassName('nav-link'))
+
+function scroll() {
+    items.forEach((e) => {
+        e.onclick = () => {
+            console.log('click')
+            $("html, body").animate({ scrollTop: document.getElementById(e.name).offsetTop }, 600);
+
+
+        }
+
+
+    })
+}
+
+
 let nCount = selector => {
     $(selector).each(function() {
         $(this)
@@ -20,7 +37,7 @@ let nCount = selector => {
     });
 };
 
-
+console.log("mm")
 
 
 
@@ -66,6 +83,7 @@ TxtType.prototype.tick = function() {
 };
 
 window.onload = function() {
+    console.log("load")
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
@@ -74,7 +92,11 @@ window.onload = function() {
             new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-}
+    if (isSafari) {
+        scroll();
+        console.log("xyz")
+    }
+};
 
 
 (function($) {
@@ -196,20 +218,6 @@ $('.navbar-nav>li>a').on('click', function() {
 
 //for safari
 
-function scroll() {
-    items.forEach((e) => {
-        e.onclick = () => {
-            console.log('click')
-            $("html, body").animate({ scrollTop: document.getElementById(e.name).offsetTop }, 600);
-
-
-        }
-
-
-    })
-}
-
-var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 if (isSafari) {
     window.addEventListener('scroll', () => {
         var elmnt = document.getElementsByTagName('html')[0];
@@ -222,7 +230,6 @@ if (isSafari) {
         }
     })
 
-    let items = Array.from(document.getElementsByClassName('nav-link'))
 
     window.addEventListener('resize', () => {
 
@@ -237,18 +244,7 @@ if (isSafari) {
 
         })
     })
-    window.onload = () => {
 
-        scroll()
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i = 0; i < elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-    }
 
 }
 
