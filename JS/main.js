@@ -114,7 +114,7 @@ $('.navbar-nav>li>a').on('click', function() {
         console.log("tuime")
         document.getElementById("navbar").style.backgroundColor = "transparent"
         document.getElementById("navbar").style.top = "-70px";
-    }, 700);
+    }, 900);
 
 });
 
