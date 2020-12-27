@@ -4,7 +4,6 @@ let items = Array.from(document.getElementsByClassName('nav-link'))
 function scroll() {
     items.forEach((e) => {
         e.onclick = () => {
-            console.log('click')
             $("html, body").animate({ scrollTop: document.getElementById(e.name).offsetTop }, 600);
 
 
@@ -37,7 +36,6 @@ let nCount = selector => {
     });
 };
 
-console.log("mm")
 
 
 
@@ -181,17 +179,28 @@ window.onbeforeunload = function() {
 
 // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
 
+$('.navbar-nav>li>a').on('click', function() {
+    $('.navbar-collapse').collapse('hide');
+    setTimeout(() => {
+        console.log("tuime")
+        document.getElementById("navbar").style.backgroundColor = "transparent"
+        document.getElementById("navbar").style.top = "-70px";
+    }, 700);
+
+});
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
+
         document.getElementById("navbar").style.backgroundColor = "#0b2b50"
         document.getElementById("navbar").style.top = "0";
 
 
     } else {
         document.getElementById("navbar").style.backgroundColor = "transparent"
-        document.getElementById("navbar").style.top = "-60px";
+        document.getElementById("navbar").style.top = "-70px";
 
 
     }
@@ -212,9 +221,7 @@ $(document).ready(function() {
     });
 });
 
-$('.navbar-nav>li>a').on('click', function() {
-    $('.navbar-collapse').collapse('hide');
-});
+
 
 //for safari
 
@@ -237,6 +244,9 @@ if (isSafari) {
             e.onclick = () => {
                 console.log('click')
                 $("html, body").animate({ scrollTop: document.getElementById(e.name).offsetTop }, 600);
+                document.getElementById("navbar").style.backgroundColor = "transparent"
+                document.getElementById("navbar").style.top = "-70px";
+
 
 
             }
