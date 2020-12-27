@@ -1,2 +1,2 @@
 # chetan767.github.io
-Link to the Website : [https://chetankhanna.me/#education]
+Link to the Website : [Portfolio](https://chetankhanna.me/#education)
