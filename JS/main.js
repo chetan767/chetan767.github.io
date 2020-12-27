@@ -192,6 +192,7 @@ if (isSafari) {
 Array.from(document.getElementsByClassName('form-control')).forEach((e) => {
     e.onfocus = () => {
         e.style.backgroundColor = "#252222"
+        e.style.color = "white"
 
     }
 })
