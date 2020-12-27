@@ -419,7 +419,7 @@
             
             .wrap-contact2 {
                 width: 790px;
-                background-color: #252222;
+                background-color: transparent;
                 border-radius: 10px;
                 overflow: hidden;
                 padding: 72px 55px 90px 55px;
@@ -455,7 +455,7 @@
                 width: 100%;
                 font-family: Poppins-Regular;
                 font-size: 15px;
-                background-color: #252222;
+                background-color: transparent;
                 color: #555555;
                 line-height: 1.2;
             }
