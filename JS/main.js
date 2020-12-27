@@ -74,7 +74,7 @@ window.onload = function() {
             new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-};
+}
 
 
 (function($) {
@@ -208,6 +208,7 @@ function scroll() {
 
     })
 }
+
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 if (isSafari) {
     window.addEventListener('scroll', () => {
@@ -239,6 +240,14 @@ if (isSafari) {
     window.onload = () => {
 
         scroll()
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
     }
 
 }
