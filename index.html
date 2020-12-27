@@ -726,20 +726,20 @@
             </div>
         </div>
         <div class="row d-flex mb-5 mt-5 justify-content-center">
-            <form>
+            <form method="post" action="https://api.formcake.com/api/form/2f9b52c0-8046-4c92-897b-2f67d3624df2/submission">
 
                 <div class="form-group col-12 mt-5">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
+                    <input type="email" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter Name">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group col-12 mt-3">
                     <label for="exampleInputPassword1"></laEmailbel>
-                    <input type="email" class="form-control" id="emal" placeholder="Enter Email">
+                    <input type="email" class="form-control" id="email" name="email"  placeholder="Enter Email">
                 </div>
                 <div class="form-group col-12 mt-3">
                     <label for="exampleFormControlTextarea1">Message/label>
-                    <textarea class="form-control" id="message" placeholder="Enter Message" rows="3"></textarea>
+                    <textarea class="form-control" id="message" name="message" placeholder="Enter Message" rows="3"></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-center mt-5">
                     <button type="submit" class="btn btn-success">Submit</button>
