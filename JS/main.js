@@ -197,5 +197,25 @@ Array.from(document.getElementsByClassName('form-control')).forEach((e) => {
     }
 })
 
-let collapse = Array.from(document.getElementsByClassName('cp'));
-console.log(collapse);
+
+let collapsediv = Array.from(document.getElementsByClassName('cpdiv'));
+console.log(collapsediv)
+
+collapsediv.forEach((e) => {
+    e.onclick = () => {
+        console.log(e.childNodes[3].childNodes[1].childNodes[1].className)
+
+        if (e.childNodes[3].childNodes[1].childNodes[1].className == "fas fa-plus collapsed") {
+            e.childNodes[3].childNodes[1].childNodes[1].className = "fas fa-minus"
+            return
+        }
+        if (e.childNodes[3].childNodes[1].childNodes[1].className == "fas fa-minus") {
+            e.childNodes[3].childNodes[1].childNodes[1].className = "fas fa-plus"
+            return
+
+
+        }
+
+
+    }
+})
