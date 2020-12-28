@@ -278,21 +278,23 @@
             }
             
             .btn-siz {
-                width: fit-content;
+                width: 15%;
+                margin-top: 0px;
+                margin-left: 5%;
+                padding: 0px;
                 height: 20px;
-                margin-top: 2px;
-                margin-left: 10%;
             }
             
             .btn-sizf {
-                width: fit-content;
-                height: 20px;
-                margin-top: 2px;
+                width: 15%;
+                margin-top: 0px;
                 margin-left: 0;
+                padding: 0px;
+                height: 20px;
             }
             
             .pm {
-                margin-top: -7.5px;
+                margin-top: -2.7px;
             }
             /*--------------------------------------------------------------
 # Contact
@@ -421,13 +423,3 @@
                 background-color: #252222;
                 opacity: 0.8;
             }
-            
-            input {
-                background-color: blue;
-                color: blueviolet;
-            }
-            /* .item {
-                border-bottom: 1px orange solid;
-                border-left: 1px orange solid;
-                border-top: 1px orange solid;
-            } */

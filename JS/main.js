@@ -196,3 +196,6 @@ Array.from(document.getElementsByClassName('form-control')).forEach((e) => {
 
     }
 })
+
+let collapse = Array.from(document.getElementsByClassName('cp'));
+console.log(collapse);
