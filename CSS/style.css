@@ -282,7 +282,7 @@
                 margin-top: 0px;
                 margin-left: 5%;
                 padding: 0px;
-                height: 20px;
+                height: 21px;
             }
             
             .btn-sizf {
@@ -290,11 +290,11 @@
                 margin-top: 0px;
                 margin-left: 0;
                 padding: 0px;
-                height: 20px;
+                height: 21px;
             }
             
             .pm {
-                margin-top: -2.7px;
+                margin-top: -2.3px;
             }
             /*--------------------------------------------------------------
 # Contact
@@ -420,6 +420,7 @@
             form {
                 width: 70%;
                 height: 100%;
+                padding: 5%;
                 background-color: #252222;
                 opacity: 0.8;
             }
