@@ -1,5 +1,5 @@
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-let items = Array.from(document.getElementsByClassName('nav-link'))
+let items = Array.from(document.getElementsByClassName('nav-link'));
 
 function scroll() {
     items.forEach((e) => {
